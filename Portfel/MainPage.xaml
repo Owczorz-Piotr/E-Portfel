@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Portfel.MainPage">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+           
+            <Entry x:Name="Id" Placeholder="Nr klienta" WidthRequest="300" Margin="10,10"/>
+            <Entry x:Name="Haslo" Placeholder="Haslo" WidthRequest="300" Margin="10,10"/>
+
+            <Button Text="Zaloguj" Clicked="ZalogujButtonClicked" Margin="10,10"/>
+            <Button Text="Stwórz kotnto" Clicked="StworzKontoButtonClicked" Margin="10,10"/>
+            
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

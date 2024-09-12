@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Portfel.DaneKonta">
+    <ScrollView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+            <Grid WidthRequest="500" Margin="10,10" RowSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="350" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Imię" VerticalOptions="Center" Grid.Column="0" Grid.Row="0"/>
+
+                <Entry x:Name="Imie" IsEnabled="False" Grid.Column="1" Grid.Row="0"/>
+
+                <Label Text="Nazwisko" VerticalOptions="Center" Grid.Column="0" Grid.Row="1"/>
+
+                <Entry x:Name="Nazwisko" IsEnabled="False" Grid.Column="1" Grid.Row="1"/>
+
+                <Label Text="Nr telefonu" VerticalOptions="Center" Grid.Column="0" Grid.Row="2"/>
+
+                <Entry x:Name="Tel" IsEnabled="False" Grid.Column="1" Grid.Row="2"/>
+
+                <Label Text="Email" VerticalOptions="Center" Grid.Column="0" Grid.Row="3"/>
+
+                <Entry x:Name="Email" IsEnabled="False" Grid.Column="1" Grid.Row="3"/>
+                
+            </Grid>
+            <Grid WidthRequest="150" RowSpacing="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button x:Name="EditButton" Text="Edytuj Dane" Clicked="EditButtonClicked" BackgroundColor="blue" Grid.Row="0"/>
+                <Button Text="Wróć" Clicked="WrocButtonClicked" Grid.Row="1"/>
+                <Button Text="Usuń konto" Clicked="UsunButtonClicked" Grid.Row="2"/>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

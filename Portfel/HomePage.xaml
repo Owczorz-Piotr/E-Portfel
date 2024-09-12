@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Portfel.HomePage"
+             Title="Strona Główna"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+            <Label x:Name="Witaj"
+                   Text=""
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   TextColor="#3498db"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="400"
+                   HeightRequest="50"
+                   HorizontalTextAlignment="Center" />
+
+            <Grid WidthRequest="600" Margin="10,20" RowSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300" />
+                    <ColumnDefinition Width="300" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Dostępne środki"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="#333"
+                       HorizontalTextAlignment="Start"
+                       Grid.Column="0"
+                       Grid.Row="0"/>
+
+                <Label x:Name="Saldo"
+                       Text=""
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="#333"
+                       HorizontalTextAlignment="End"
+                       Grid.Column="1"
+                       Grid.Row="0"/>
+
+                <Button Text="Dodaj środki"
+                        Clicked="DodajSrodkiButtonClicked"
+                        WidthRequest="200"
+                        BackgroundColor="#3498db"
+                        TextColor="White"
+                        CornerRadius="20"
+                        Grid.Column="0"
+                        Grid.Row="1"/>
+
+                <Button Text="Przelew"
+                        Clicked="PrzelewButtonClicked"
+                        WidthRequest="200"
+                        BackgroundColor="#3498db"
+                        TextColor="White"
+                        CornerRadius="20"
+                        Grid.Column="1"
+                        Grid.Row="1"/>
+
+                <Button Text="Wypłać środki"
+                        Clicked="WyplacSrodkiButtonClicked"
+                        WidthRequest="200"
+                        BackgroundColor="#3498db"
+                        TextColor="White"
+                        CornerRadius="20"
+                        Grid.Column="0"
+                        Grid.Row="2"/>
+
+                <Button Text="Historia transakcji"
+                        Clicked="HistoriaTransakcjiButtonClicked"
+                        WidthRequest="200"
+                        BackgroundColor="#3498db"
+                        TextColor="White"
+                        CornerRadius="20"
+                        Grid.Column="1"
+                        Grid.Row="2"/>
+            </Grid>
+
+            <Grid WidthRequest="600" Margin="10,20" ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Source="person.png"
+                             Clicked="DaneButtonClicked"
+                             WidthRequest="80"
+                             HeightRequest="80"
+                             BackgroundColor="#3498db"
+                             CornerRadius="40"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Grid.Column="0"/>
+
+                <ImageButton Source="dollar.png"
+                             Clicked="KursyButtonClicked"
+                             WidthRequest="80"
+                             HeightRequest="80"
+                             BackgroundColor="#3498db"
+                             CornerRadius="40"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Grid.Column="1"/>
+
+                <ImageButton Source="exit.png"
+                             Clicked="ExitButtonClicked"
+                             WidthRequest="80"
+                             HeightRequest="80"
+                             BackgroundColor="#E74C3C"
+                             CornerRadius="40"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Grid.Column="2"
+                             Padding="10"
+                             />
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Portfel.Kursy"
+             Title="Kursy"
+             BackgroundColor="#F5F5F5">
+
+    <StackLayout Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
+
+        <StackLayout Padding="20">
+            <Label x:Name="RatesLabel" 
+                   Text="Kursy Walut w porównaniu do USD" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="30"
+                   TextColor="#333"
+                   HorizontalTextAlignment="Center"/>
+            
+            <Label x:Name="RatesValueLabel" 
+                   Text="" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="24"
+                   TextColor="#888"
+                   HorizontalTextAlignment="Center"/>
+        </StackLayout>
+
+        <Grid Padding="10" VerticalOptions="End">
+            <Button Text="Wróć"
+                    Clicked="WrocButtonClicked"
+                    BackgroundColor="#3498db"
+                    TextColor="White"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="10"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

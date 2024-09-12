@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Portfel.DodajSaldo"
+             Title="Dodaj Saldo"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+
+            <Entry x:Name="Kwota"
+                   Placeholder="Kwota"
+                   WidthRequest="400"
+                   Margin="10,20"
+                   BackgroundColor="White"
+                   FontSize="18"
+                   PlaceholderColor="#888"
+                   TextColor="#333"
+                   HorizontalTextAlignment="Center"
+                   HeightRequest="50" />
+
+            <Grid WidthRequest="400" Margin="10,20" RowSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Dodaj"
+                        Clicked="DodajButtonClicked"
+                        BackgroundColor="#3498db"
+                        TextColor="White"
+                        CornerRadius="20"
+                        Margin="10,10"
+                        WidthRequest="180"
+                        HeightRequest="50"
+                        Grid.Column="0" />
+
+                <Button Text="Wróć"
+                        Clicked="WrocButtonClicked"
+                        BackgroundColor="#E74C3C"
+                        TextColor="White"
+                        CornerRadius="20"
+                        Margin="10,10"
+                        WidthRequest="180"
+                        HeightRequest="50"
+                        Grid.Column="1" />
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
